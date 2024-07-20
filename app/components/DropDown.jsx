@@ -23,12 +23,13 @@ const DropDown = ({ links, children }) => {
 
       {isOpen && (
         <div
-          class="absolute right-0 z-10  w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+          class="absolute right-0 z-10 p-y-2  w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
           tabindex="-1"
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
         >
-          {links.map((link) => {
+          {links.map((link, index) => {
+            if (index === 0) return;
             return (
               <a
                 href="#"
