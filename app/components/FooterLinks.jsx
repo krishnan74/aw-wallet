@@ -13,8 +13,8 @@ const FooterLinks = ({ links }) => {
           );
         } else {
           return (
-            <Link key={index} href="#">
-              <a className="text-sm">{link}</a>
+            <Link key={index} href="#" className="text-sm">
+              {link}
             </Link>
           );
         }

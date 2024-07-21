@@ -61,15 +61,15 @@ const Navbar = () => {
           />
         </div>
         <div className="flex gap-2 md:gap-3">
-          <div className="rounded-full border border-black p-3">
+          <Link href={"/"} className="rounded-full border border-black p-3 ">
             <RiUserLine></RiUserLine>
-          </div>
-          <div className="rounded-full border border-black p-3">
+          </Link>
+          <Link href={"#"} className="rounded-full border border-black p-3 ">
             <RiHeart3Line></RiHeart3Line>
-          </div>
-          <div className="rounded-full border border-black p-3">
+          </Link>
+          <Link href={"#"} className="rounded-full border border-black p-3 ">
             <RiShoppingBag4Line></RiShoppingBag4Line>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
