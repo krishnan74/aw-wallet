@@ -14,11 +14,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en ">
       <body className={outfit.className}>
         <Navbar></Navbar>
         {children}
-        <Footer supportLinks = {[]}></Footer>
+        <Footer supportLinks={[]}></Footer>
       </body>
     </html>
   );

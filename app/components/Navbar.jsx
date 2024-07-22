@@ -36,19 +36,19 @@ const Navbar = () => {
   const links = [menLinks, womenLinks, kidsLinks, moreLinks];
 
   return (
-    <div className="flex flex-wrap justify-center items-center h-fit py-5 border-b px-4 md:justify-between md:px-8 lg:px-16 gap-y-5">
-      <div className="flex items-center gap-[16px]">
+    <div className="flex flex-wrap justify-center items-center h-fit py-5 border-b px-4 md:justify-between gap-x-10  md:px-8 lg:px-16 gap-y-5">
+      <div className="flex items-center gap-[16px] ">
         <div className="bg-[#184A2C] w-[64px] h-[64px] rounded-full"></div>
         <span className="text-lg font-bold">
           ALIEN <br /> WARDROBE
         </span>
       </div>
-      <div className="hidden md:flex gap-6 lg:gap-10">
+      <div className="hidden md:flex gap-6 lg:gap-1 border-3 ">
         {links.map((link, index) => (
           <DropDown key={index} links={link}></DropDown>
         ))}
       </div>
-      <div className="flex gap-4 md:gap-6">
+      <div className="flex gap-4 md:gap-6 justify-center max-xl:w-full">
         <div className="relative w-full md:w-auto">
           <IoSearchOutline
             className="absolute top-[10px] left-4"
