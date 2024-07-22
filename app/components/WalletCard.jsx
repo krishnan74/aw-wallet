@@ -18,7 +18,7 @@ const WalletCard = ({ balanceAmount }) => {
 
   return (
     <div
-      className="relative flex w-full max-w-[450px] h-[280px] max-sm:h-[200px] rounded-xl p-4 md:p-8"
+      className="relative flex w-full max-w-[450px] h-[280px] max-sm:h-[200px] rounded-xl p-4 md:p-8 "
       style={styles.gradientBackground}
     >
       <div

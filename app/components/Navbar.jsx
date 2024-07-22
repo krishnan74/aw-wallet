@@ -47,8 +47,8 @@ const Navbar = () => {
         {links.map((link, index) => {
           if (index === 2) {
             return (
-              <div>
-                <DropDown key={index} links={link}></DropDown>{" "}
+              <div key={`dropdown-${index}`}>
+                <DropDown links={link}></DropDown>{" "}
                 <Link
                   href={"#"}
                   className="text-sm text-gray-900 hover:bg-gray-50 px-3 py-2"
@@ -58,7 +58,7 @@ const Navbar = () => {
               </div>
             );
           }
-          return <DropDown key={index} links={link}></DropDown>;
+          return <DropDown key={`dropdown-${index}`} links={link}></DropDown>;
         })}
       </div>
       <div className="flex gap-4 md:gap-6 justify-center max-xl:w-full items-center">
