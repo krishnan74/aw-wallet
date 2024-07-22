@@ -4,7 +4,7 @@ import WalletCard from "./components/WalletCard";
 
 const Page = () => {
   return (
-    <div className="flex flex-col px-4 md:px-10 lg:px-20 xl:px-40 w-full">
+    <div className="flex flex-col px-4 md:px-12 lg:px-20 xl:px-[220px] py-8">
       <div className="py-9 border-b">
         <p className="mb-5 text-sm">
           <span className="opacity-50">Home /</span> Profile
@@ -15,16 +15,16 @@ const Page = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row py-9 gap-10">
-        <div className="flex flex-col gap-8 w-full lg:w-[20%] py-6 px-6 rounded-md shadow-md h-fit">
+        <div className="flex flex-col gap-8 w-full lg:w-[20%] py-6 px-6 rounded-md shadow-md border-[#9a9a9a28] border-t h-fit text-sm">
           <Link href={"#"}>Profile</Link>
           <Link href={"#"}>Orders & Returns</Link>
           <Link href={"#"}>Saved Addresses</Link>
           <Link href={"#"}>Saved Payment Details</Link>
           <Link href={"#"}>Wallet</Link>
         </div>
-        <div className="w-full lg:w-[76%] flex flex-col lg:flex-row gap-10 p-6 max-sm:p-0 lg:p-12 rounded-md shadow-md  ">
+        <div className="w-full flex flex-col lg:flex-row gap-x-20 p-6 max-sm:p-0  lg:p-12 rounded-md shadow-md border-[#9a9a9a28] border-t   ">
           <WalletCard balanceAmount={1499} className=" max-sm:scale-50" />
-          <div className="flex flex-col items-center justify-center border-2 border-black ">
+          <div className="flex flex-col items-center justify-center p-8 ">
             <div className="flex flex-col items-center mb-3">
               <div className="flex items-center gap-1">
                 <div className="bg-[#184A2C] w-[20px] h-[20px] rounded-full"></div>
@@ -37,7 +37,7 @@ const Page = () => {
               </span>
             </div>
 
-            <p className="text-center text-sm w-[200px]">
+            <p className="text-center text-sm w-[200px] text-[#444]">
               A Fast and Easy Way to Pay and Get Refunds!!
             </p>
 
