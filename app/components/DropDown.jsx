@@ -14,7 +14,7 @@ const DropDown = ({ links, children }) => {
       <div onMouseEnter={toggle} onMouseLeave={toggle}>
         <button
           type="button"
-          className="inline-flex w-full justify-center items-center gap-x-2 bg-white px-3 py-2 text-sm text-gray-900 hover:bg-gray-50"
+          className="inline-flex w-full justify-center items-center gap-x-2 bg-white px-3 py-2 text-sm  hover:bg-gray-50"
           id="menu-button"
         >
           {links[0]}
@@ -32,10 +32,10 @@ const DropDown = ({ links, children }) => {
           {links.slice(1).map(
             (
               link,
-              index // Use slice(1) to skip the first element which is already rendered
+              index 
             ) => (
               <a
-                key={index} // Add key prop here
+                key={index} 
                 href="#"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >

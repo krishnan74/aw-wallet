@@ -1,11 +1,30 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import WalletCard from "./components/WalletCard";
 import TransactionLog from "./components/TransactionLog";
-import TopUpCard from "./components/TopUpCard";
+import WalletComponent from "./components/WalletComponent";
 import HowItWorks from "./components/HowItWorks";
 
 const Page = () => {
+  const [isMobileScreen, setIsMobileScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setIsMobileScreen(true);
+      } else {
+        setIsMobileScreen(false);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const logs = [
     {
       title: "Refund",
@@ -64,8 +83,8 @@ const Page = () => {
   ];
 
   return (
-    <div className="flex flex-col px-4 md:px-12 lg:px-20 xl:px-[220px] py-8">
-      <div className="pt-2 pb-8 border-b">
+    <div className="flex flex-col  py-8">
+      <div className="pt-2 text-[#444] pb-8 border-b px-4 md:px-12 lg:px-20 xl:px-[220px]">
         <p className="mb-5 text-sm">
           <span className="opacity-50">Home /</span> Profile
         </p>
@@ -74,18 +93,54 @@ const Page = () => {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row py-9 gap-10">
-        <div className="flex flex-col gap-8 w-full lg:w-[20%] py-6 px-6 rounded-md shadow-md border-[#9a9a9a28] border-t h-fit text-sm">
-          <Link href={"#"}>Profile</Link>
-          <Link href={"#"}>Orders & Returns</Link>
-          <Link href={"#"}>Saved Addresses</Link>
-          <Link href={"#"}>Saved Payment Details</Link>
-          <Link href={"#"}>Wallet</Link>
+      <div
+        className={`flex flex-col lg:flex-row py-9 max-sm:py-0 gap-10  max-sm:gap-0
+           md:px-12 lg:px-20 xl:px-[220px]
+        `}
+      >
+        <div className="border-[#9a9a9a28] max-sm:px-4 border-t h-fit rounded-md shadow-md  py-6 px-6 w-full lg:w-[20%]  ">
+          <div
+            className={` ${
+              isMobileScreen
+                ? "flex  overflow-x-scroll gap-8 px-4"
+                : "flex flex-col  gap-8  text-sm text-[#444]"
+            }`}
+          >
+            <Link href={"#"} className="flex-shrink-0">
+              Profile
+            </Link>
+            <Link href={"#"} className="flex-shrink-0">
+              Orders & Returns
+            </Link>
+            <Link href={"#"} className="flex-shrink-0">
+              Saved Addresses
+            </Link>
+            <Link href={"#"} className="flex-shrink-0">
+              Saved Payment Details
+            </Link>
+            <Link
+              href={"#"}
+              className="flex-shrink-0 font-semibold text-[16px] text-[#3D7654]"
+            >
+              Wallet
+            </Link>
+          </div>
         </div>
+
         <div className="w-full flex flex-col gap-y-10   border-[#9a9a9a28] ">
-          <TopUpCard></TopUpCard>
-          <TransactionLog logs={logs}> </TransactionLog>
-          <HowItWorks></HowItWorks>
+          <div>
+            <WalletComponent></WalletComponent>
+          </div>
+          <div
+            className="
+              max-sm:px-4 "
+          >
+            <TransactionLog logs={logs}> </TransactionLog>
+          </div>
+
+          <div className="max-sm:px-4 ">
+            <HowItWorks dynamic={true}></HowItWorks>
+          </div>
         </div>
       </div>
     </div>

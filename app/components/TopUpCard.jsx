@@ -1,29 +1,34 @@
 import React from "react";
-import WalletCard from "./WalletCard";
 
-const TopUpCard = () => {
+const TopUpCard = ({ topUpMoneySuggestions, handleClick, money }) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-x-20 rounded-md shadow-md  border p-6 max-sm:p-0  lg:p-12 ">
-      <WalletCard balanceAmount={1499} className=" max-sm:scale-50 " />
-      <div className="flex flex-col items-center justify-center ">
-        <div className="flex flex-col items-center mb-3">
-          <div className="flex items-center gap-1">
-            <div className="bg-[#184A2C] w-[20px] h-[20px] rounded-full"></div>
-            <span className="text-lg font-bold tracking-widest text-[#184A2C]">
-              AW
-            </span>
-          </div>
-          <span className="text-lg font-bold tracking-widest text-[#184A2C]">
-            Wallet
-          </span>
-        </div>
-        <p className="text-center text-sm w-[200px] text-[#444]">
-          A Fast and Easy Way to Pay and Get Refunds!!
-        </p>
-        <button className="border-[#184A2C] border-2 duration-200 text-[#184A2C] hover:bg-[#184A2C] hover:text-white px-10 py-2 rounded-full mt-5">
-          Top Up
-        </button>
+    <div className="flex flex-col justify-center p-6 rounded-md shadow-md border-[#9a9a9a28] border-t">
+      <div className="flex justify-between text-xl font-semibold mb-5 max-sm:text-lg pb-5 border-b">
+        <p>Wallet Top Up</p>
       </div>
+      <div className="flex flex-wrap gap-5">
+        {topUpMoneySuggestions.map((suggestion, index) => (
+          <button
+            key={index}
+            className="bg-[#F5F5F5] rounded-full text-xs  px-5 text-[#444] py-2"
+            onClick={() => handleClick(suggestion)}
+          >
+            {`₹ ${suggestion.toString()}`}
+          </button>
+        ))}
+      </div>
+
+      <input
+        type="text"
+        value={money}
+        className="border-b py-2 mt-10 text-sm w-full"
+        placeholder="₹ Enter an Amount (eg: 1000)"
+        onChange={(e) => handleClick(e.target.value)}
+      />
+
+      <button className="text-white mt-10 py-3 rounded-full mb-5  bg-gradient-to-b from-[#184A2CCC] to-[#599872CC]">
+        Top Up
+      </button>
     </div>
   );
 };

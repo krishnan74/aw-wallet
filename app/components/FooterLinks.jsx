@@ -3,11 +3,11 @@ import React from "react";
 
 const FooterLinks = ({ links }) => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 text-[#444]">
       {links.map((link, index) => {
         if (index === 0) {
           return (
-            <p key={index} className="text-md font-bold mb-3">
+            <p key={index} className="text-lg font-bold mb-3 ">
               {link}
             </p>
           );

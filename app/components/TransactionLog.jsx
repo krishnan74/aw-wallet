@@ -11,7 +11,7 @@ const TransactionLog = ({ logs }) => {
   const logsToDisplay = logs.slice(0, displayCount);
 
   return (
-    <div className="px-8 pt-8 pb-5 rounded-md shadow-md border-[#9a9a9a28] border-t">
+    <div className="text-[#444] px-8 pt-8 pb-5 rounded-md shadow-md border-[#9a9a9a28] border-t ">
       <h2 className="text-xl font-semibold mb-4 max-sm:text-lg pb-5 border-b">
         Transaction Log
       </h2>

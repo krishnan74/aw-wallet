@@ -28,7 +28,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="flex flex-col px-4 md:px-12 lg:px-20 xl:px-[220px] py-8 ">
+    <div className="flex flex-col px-4 md:px-12 lg:px-20 xl:px-[220px] py-8 mb-10 ">
       <div className="flex flex-wrap items-center h-fit py-8 max-sm:py-3 border-b mb-10 border-t ">
         <div className="flex items-center justify-start gap-4 md:gap-8 w-[50%] max-sm:scale-75">
           <div className="bg-[#444444] w-[64px] h-[64px] max-sm:w-[40px] max-sm:h-[40px] rounded-full"></div>
@@ -38,19 +38,19 @@ const Footer = () => {
         </div>
         <div className="flex gap-2 md:gap-3 mt-4 md:mt-0 items-center w-[50%] max-sm:scale-[0.60] justify-end">
           <div className="rounded-full bg-black text-white p-3">
-            <IoLogoInstagram></IoLogoInstagram>
+            <IoLogoInstagram size={20}></IoLogoInstagram>
           </div>
           <div className="rounded-full bg-black text-white p-3">
-            <RiTwitterXLine></RiTwitterXLine>
+            <RiTwitterXLine size={20}></RiTwitterXLine>
           </div>
           <div className="rounded-full bg-black text-white p-3">
-            <FaWhatsapp></FaWhatsapp>
+            <FaWhatsapp size={20}></FaWhatsapp>
           </div>
           <div className="rounded-full bg-black text-white p-3">
-            <RiFacebookFill></RiFacebookFill>
+            <RiFacebookFill size={20}></RiFacebookFill>
           </div>
           <div className="rounded-full bg-black text-white p-3">
-            <FaLinkedinIn></FaLinkedinIn>
+            <FaLinkedinIn size={20}></FaLinkedinIn>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ const Footer = () => {
             <div className="bg-[#D9D9D9] w-[80px] h-[80px] rounded-full"></div>
             <div className="bg-[#D9D9D9] w-[80px] h-[80px] rounded-full"></div>
           </div>
-          <p className="text-sm text-center lg:text-right">
+          <p className="text-sm text-center lg:text-right text-[#444]">
             Designed & Crafted with Love by{" "}
             <span className="font-bold">RECINDUS</span>
           </p>
