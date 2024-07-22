@@ -127,7 +127,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="w-full flex flex-col gap-y-10   border-[#9a9a9a28] ">
+        <div className="w-full flex flex-col gap-y-5   border-[#9a9a9a28] ">
           <div>
             <WalletComponent></WalletComponent>
           </div>

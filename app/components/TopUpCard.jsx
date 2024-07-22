@@ -18,13 +18,16 @@ const TopUpCard = ({ topUpMoneySuggestions, handleClick, money }) => {
         ))}
       </div>
 
-      <input
-        type="text"
-        value={money}
-        className="border-b py-2 mt-10 text-sm w-full"
-        placeholder="₹ Enter an Amount (eg: 1000)"
-        onChange={(e) => handleClick(e.target.value)}
-      />
+      <div className="relative">
+        <p className="absolute top-[47px] left-3 ">₹</p>
+        <input
+          type="number"
+          value={money}
+          className="border-b pl-7  py-2 mt-10 text-sm w-full "
+          placeholder="Enter an Amount (eg: 1000)"
+          onChange={(e) => handleClick(e.target.value)}
+        />
+      </div>
 
       <button className="text-white mt-10 py-3 rounded-full mb-5  bg-gradient-to-b from-[#184A2CCC] to-[#599872CC]">
         Top Up

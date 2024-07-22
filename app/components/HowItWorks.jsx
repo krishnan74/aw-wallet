@@ -34,7 +34,11 @@ const HowItWorks = ({ dynamic }) => {
   ];
 
   return (
-    <div className="p-8 rounded-md shadow-md border-[#9a9a9a28] border-t text-[#444]">
+    <div
+      className={`pt-8 px-8 max-sm:pt-5 ${
+        isOpen ? "max-sm:pb-5" : "max-sm:pb-0"
+      }  pb-5 rounded-md shadow-md border-[#9a9a9a28] border-t text-[#444]`}
+    >
       <div className="flex justify-between text-xl font-semibold mb-4 max-sm:text-lg pb-5 border-b">
         <p>How It Works ? </p>
         <button

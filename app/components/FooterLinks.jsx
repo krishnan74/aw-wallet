@@ -7,13 +7,13 @@ const FooterLinks = ({ links }) => {
       {links.map((link, index) => {
         if (index === 0) {
           return (
-            <p key={index} className="text-lg font-bold mb-3 ">
+            <p key={index} className="text-lg max-sm:text-sm font-bold mb-3 ">
               {link}
             </p>
           );
         } else {
           return (
-            <Link key={index} href="#" className="text-sm">
+            <Link key={index} href="#" className="text-sm max-sm:text-xs">
               {link}
             </Link>
           );
